@@ -1,9 +1,7 @@
 import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
 
-import { appRouter, createTRPCContext } from "@acme/api";
-import { auth } from "@acme/auth";
-
-export const runtime = "edge";
+import { appRouter, createTRPCContext } from "@flow/api";
+import { auth } from "@flow/auth";
 
 /**
  * Configure basic CORS headers

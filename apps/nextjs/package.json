@@ -1,5 +1,5 @@
 {
-  "name": "@acme/nextjs",
+  "name": "@flow/nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,9 +13,9 @@
     "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
-    "@acme/api": "workspace:^0.1.0",
-    "@acme/auth": "workspace:^0.1.0",
-    "@acme/db": "workspace:^0.1.0",
+    "@flow/api": "workspace:^0.1.0",
+    "@flow/auth": "workspace:^0.1.0",
+    "@flow/db": "workspace:^0.1.0",
     "@t3-oss/env-nextjs": "^0.7.1",
     "@tanstack/react-query": "^5.8.1",
     "@tanstack/react-query-devtools": "^5.8.1",
@@ -31,10 +31,10 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@acme/eslint-config": "workspace:^0.2.0",
-    "@acme/prettier-config": "workspace:^0.1.0",
-    "@acme/tailwind-config": "workspace:^0.1.0",
-    "@acme/tsconfig": "workspace:^0.1.0",
+    "@flow/eslint-config": "workspace:^0.2.0",
+    "@flow/prettier-config": "workspace:^0.1.0",
+    "@flow/tailwind-config": "workspace:^0.1.0",
+    "@flow/tsconfig": "workspace:^0.1.0",
     "@types/node": "^18.18.9",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
@@ -47,10 +47,10 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@acme/eslint-config/base",
-      "@acme/eslint-config/nextjs",
-      "@acme/eslint-config/react"
+      "@flow/eslint-config/base",
+      "@flow/eslint-config/nextjs",
+      "@flow/eslint-config/react"
     ]
   },
-  "prettier": "@acme/prettier-config"
+  "prettier": "@flow/prettier-config"
 }

@@ -1,0 +1,15 @@
+services:
+  db:
+    image: mysql
+    container_name: flow-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: flow
+      MYSQL_DATABASE: flow_db
+    volumes:
+      - mysql:/var/lib/flow-pg/data
+    ports:
+      - 3306:3306
+
+volumes:
+  mysql: ~

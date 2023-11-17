@@ -1,4 +1,4 @@
-import { auth, signIn, signOut } from "@acme/auth";
+import { auth, signIn, signOut } from "@flow/auth";
 
 export async function AuthShowcase() {
   const session = await auth();
@@ -8,11 +8,11 @@ export async function AuthShowcase() {
       <form
         action={async () => {
           "use server";
-          await signIn("discord");
+          await signIn("github");
         }}
       >
         <button className="rounded-full bg-white/10 px-10 py-3 font-semibold no-underline transition hover:bg-white/20">
-          Sign in with Discord
+          Sign in with Github
         </button>
       </form>
     );
