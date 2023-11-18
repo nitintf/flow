@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    /* Fonts size */
+		--font-h1: clamp(3.3rem, .5692rem + 7.238vw, 11.75rem);
+    --font-h2: clamp(2rem, 1.0982rem + 2.1143vw, 6.8125rem);
+    --font-h3: clamp(1.375rem, 1.1837rem + .8163vw, 2rem);
+    --font-h4: clamp(1.375rem, 1.1837rem + .8163vw, 1.6rem);
+    --font-h5: clamp(1rem, .9235rem + .3265vw, 1.25rem);
+    --font-h6: clamp(1rem, .9617rem + .1633vw, 1.125rem);
+    --font-body: clamp(1rem, .8852rem + .4898vw, 1.375rem);
+    --font-link: clamp(.875rem, .7985rem + .3265vw, 1.125rem);
+    --font-mini: clamp(.875rem, .8367rem + .1633vw, 1rem);
+    --font-h2-display: clamp(1.875rem, 1.301rem + 2.449vw, 3.95rem);
+
+    /* Spacings */
+    --spacing-xxl: max( 130px, calc(130px + (260 - 130) * ((100vw - 375px) / (1600 - 375))) );
+    --spacing-xl: max( var(--64px), calc(var(--64px) + (128 - 64) * ((100vw - 375px) / (1600 - 375))) );
+    --spacing-l: max( var(--42px), calc(var(--42px) + (84 - 42) * ((100vw - 375px) / (1600 - 375))) );
+    --spacing-m: max( var(--24px), calc(var(--24px) + (48 - 24) * ((100vw - 375px) / (1600 - 375))) );
+    --spacing-s: max( var(--21px), calc(var(--21px) + (42 - 21) * ((100vw - 375px) / (1600 - 375))) );
+    --spacing-xs: max( var(--14px), calc(var(--14px) + (28 - 14) * ((100vw - 375px) / (1600 - 375))) );
+    --spacing-xxs: max( calc(var(--14px) / 2), calc((var(--14px) / 2) + (14 - 7) * ((100vw - 375px) / (1600 - 375))) );
+
+    /* Sizes */
+		--14px: .875rem;
+    --15px: .9375rem;
+    --16px: 1rem;
+    --17px: 1.0625rem;
+    --18px: 1.125rem;
+    --19px: 1.1875rem;
+    --20px: 1.25rem;
+    --21px: 1.3125rem;
+    --24px: 1.5rem;
+    --42px: 2.652rem;
+    --64px: 4rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}

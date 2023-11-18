@@ -1,14 +1,41 @@
-import { AuthShowcase } from "./_components/auth-showcase";
+import { Button } from "@flow/ui/components/button";
+import Image from "next/image";
+import { Features } from "~/components/landing/features";
+import { Footer } from "~/components/landing/footer";
+import Header from "~/components/landing/header";
+import { Pricing } from "~/components/landing/pricing";
+import { Providers } from "~/components/landing/providers";
+import { Title } from "~/components/landing/title";
 
 export default function HomePage() {
   return (
-    <main className="flex h-screen flex-col items-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="container mt-12 flex flex-col items-center justify-center gap-4 py-8">
-        <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
-          Flow
-        </h1>
-        <AuthShowcase />
-      </div>
-    </main>
+    <div className="flex h-screen flex-col items-center">
+      <Header />
+      <main className="flex-grow">
+
+        {/* Hero Section */}
+        <section className="relative">
+          <div className="pt-40">
+            <Title />
+          </div>
+          <div className="flex w-full justify-center gap-4 flex-wrap">
+            <div>
+              <Button>Request Demo</Button>
+            </div>
+            <div>
+              <Button variant={'outline'}>Try For Free</Button>
+            </div>
+          </div>
+
+          <div className="mt-l mb-l relative flex justify-center md:mx-0 mx-m">
+            <Image className="rounded-xl" src={"/images/hero-image.png"} width={1104} height={600} alt="Dashboard hero image"/>
+          </div>
+        </section>
+        <Features />
+        <Pricing />
+        <Providers />
+        <Footer />
+      </main>
+    </div>
   );
 }

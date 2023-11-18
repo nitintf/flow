@@ -9,7 +9,6 @@
     "build": "turbo build",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo clean",
-    "postinstall": "pnpm lint:ws",
     "db:push": "pnpm -F db push",
     "db:studio": "pnpm -F db studio",
     "db:gen": "pnpm -F db generate",
@@ -19,6 +18,7 @@
     "lint": "turbo lint --continue -- --cache --cache-location 'node_modules/.cache/.eslintcache'",
     "lint:fix": "turbo lint --continue -- --fix --cache --cache-location 'node_modules/.cache/.eslintcache'",
     "lint:ws": "pnpm dlx sherif@latest",
+    "ui:add": "pnpm --filter @flow/ui ui:add",
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {

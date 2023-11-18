@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+
+  .landing-bg {
+    background:
+      linear-gradient(#fff, #fff) padding-box,
+      linear-gradient(120deg, #d4d4d8, #f4f4f5, #d4d4d8) border-box;
+  }
+
+  .nav-bg {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  .header-text {
+    --tw-gradient-from: #71717a 0;
+    --tw-gradient-to: rgb(0, 0, 0) 100%;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    background-image: linear-gradient(
+      to right,
+      var(--tw-gradient-stops)
+    ) !important;
+  }
+
+  .providers-mask {
+    -webkit-mask-image: linear-gradient(to right,transparent 8px,rgb(255 255 255/70) 64px,#000000 50%,rgb(255 255 255/70) calc(100% - 64px),transparent calc(100% - 8px));
+    mask-image: linear-gradient(to right,transparent 8px,rgb(255 255 255/70) 64px,#000000 50%,rgb(255 255 255/70) calc(100% - 64px),transparent calc(100% - 8px));
+  }
+
+  .provider-item-bg {
+    background: linear-gradient(#000000,#000000) padding-box,linear-gradient(120deg,#595959,#000000,#595959) border-box;
+  }
+}
