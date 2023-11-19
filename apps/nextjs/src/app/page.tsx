@@ -1,5 +1,7 @@
+import { auth } from "@flow/auth";
 import { Button } from "@flow/ui/components/button";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 import { Features } from "~/components/landing/features";
 import { Footer } from "~/components/landing/footer";
 import Header from "~/components/landing/header";
@@ -7,7 +9,13 @@ import { Pricing } from "~/components/landing/pricing";
 import { Providers } from "~/components/landing/providers";
 import { Title } from "~/components/landing/title";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const session = await auth()
+
+  if (session && session.user) {
+    redirect('/dashboard')
+  }
+
   return (
     <div className="flex h-screen flex-col items-center">
       <Header />

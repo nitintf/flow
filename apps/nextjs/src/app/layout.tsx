@@ -30,9 +30,10 @@ export const metadata: Metadata = {
 };
 
 export default function Layout(props: { children: React.ReactNode }) {
+
   return (
     <html lang="en" className="h-full bg-gray-50">
-      <body className={["font-sans", fontSans.variable].join(" ")}>
+      <body suppressHydrationWarning className={["font-sans", fontSans.variable].join(" ")}>
         <TRPCReactProvider headers={headers()}>
           {props.children}
         </TRPCReactProvider>

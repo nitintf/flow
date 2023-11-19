@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 
-import { Button } from "@flow/ui/components/button";
 import useScrollPosition from "~/hooks/useScrollPosition";
 import { cn } from "@flow/ui/lib/utils";
+import { Button } from "@flow/ui/components/button";
 
 export default function Header() {
   const { isScrolled } = useScrollPosition({ threshold: 100 })
@@ -33,8 +33,8 @@ export default function Header() {
                   </Link>
                 </li>
                 <li className="ml-6">
-                  <Button asChild size={"sm"}>
-                    <Link href="/login" className={cn({ " mix-blend-difference": isScrolled })}>Login</Link>
+                  <Button asChild>
+                    <Link href={'/signin'}>Sign In</Link>
                   </Button>
                 </li>
               </ul>
