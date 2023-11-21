@@ -35,11 +35,12 @@
   }
 
   .providers-mask {
-    -webkit-mask-image: linear-gradient(to right,transparent 8px,rgb(255 255 255/70) 64px,#000000 50%,rgb(255 255 255/70) calc(100% - 64px),transparent calc(100% - 8px));
-    mask-image: linear-gradient(to right,transparent 8px,rgb(255 255 255/70) 64px,#000000 50%,rgb(255 255 255/70) calc(100% - 64px),transparent calc(100% - 8px));
+    -webkit-mask-image: linear-gradient(to right,transparent 8px,rgb(255 255 255/70) 94px,#000000 60%,rgb(255 255 255/70) calc(100% - 64px),transparent calc(100% - 8px));
+    mask-image: linear-gradient(to right,transparent 8px,rgb(255 255 255/70) 94px,#000000 50%,rgb(255 255 255/70) calc(100% - 64px),transparent calc(100% - 30px));
   }
 
   .provider-item-bg {
-    background: linear-gradient(#000000,#000000) padding-box,linear-gradient(120deg,#595959,#000000,#595959) border-box;
+    --c: hsl(233 84% 60%);
+    background: linear-gradient(--c, --c) padding-box,linear-gradient(120deg,#595959,#000000,#595959) border-box;
   }
 }

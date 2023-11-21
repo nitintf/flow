@@ -1,6 +1,6 @@
 export const Features = () => {
   return (
-    <section className="relative w-screen bg-gray-100">
+    <section className="relative w-screen bg-gray-50">
       <div className="py-l">
         <div className="px-m">
           <div className="text-center">

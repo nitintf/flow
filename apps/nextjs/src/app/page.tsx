@@ -1,6 +1,7 @@
 import { auth } from "@flow/auth";
 import { Button } from "@flow/ui/components/button";
 import Image from "next/image";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { Features } from "~/components/landing/features";
 import { Footer } from "~/components/landing/footer";
@@ -31,7 +32,9 @@ export default async function HomePage() {
               <Button>Request Demo</Button>
             </div>
             <div>
-              <Button variant={'outline'}>Try For Free</Button>
+              <Button variant={'outline'} asChild>
+                <Link href={"/signin"}>Try For Free</Link>
+              </Button>
             </div>
           </div>
 

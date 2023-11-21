@@ -1,14 +1,17 @@
 import { Button } from "@flow/ui/components/button"
+import Link from "next/link"
 
 export const Providers = () => {
   return (
-    <section className="relative bg-black w-screen py-xl">
-      <div className="px-m">
+    <section className="relative w-full">
+      <div className="px-m py-xl bg-primary mx-xs rounded-lg">
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-h3 font-[700] pb-xxs text-gray-100">Tailor Your Storage Experience with Cloud Freedom</h2>
-          <p className="text-link text-gray-400 mb-xs">Connect Anywhere, Store Everywhere: Your Recordings, Your Cloud. Seamless Integration with Any Cloud Storage Provider for Unmatched Flexibility.</p>
+          <p className="text-link text-white mb-xs">Connect Anywhere, Store Everywhere: Your Recordings, Your Cloud. Seamless Integration with Any Cloud Storage Provider for Unmatched Flexibility.</p>
           <Button variant={'secondary'}>Request Demo</Button>
-          <Button variant={'link'} className="ml-xxs text-white">Try for Free</Button>
+          <Button variant={'link'} className="ml-xxs text-white" asChild>
+            <Link href={"/signin"}>Try For Free</Link>
+          </Button>
         </div>
         <div>
           <div className="text-center max-w-6xl mx-auto mt-m">

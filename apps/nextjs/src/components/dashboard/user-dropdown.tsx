@@ -62,9 +62,9 @@ export function UserDropdown({ user }: { user: any }) {
           <span>API</span>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
+        <DropdownMenuItem onClick={() => signOut()}>
           <LogOut className="mr-2 h-4 w-4" />
-          <button onClick={() => signOut()}>Logout</button>
+          <p>Logout</p>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

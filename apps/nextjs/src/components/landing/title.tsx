@@ -6,7 +6,7 @@ export const Title = () => {
         <em className="relative items-center justify-center px-6 text-black">
           Canvas
           <svg
-            className="absolute left-[15px] z-[-15] inline-flex w-[85%] fill-[#d4d4d8]"
+            className="absolute left-[15px] z-[-15] inline-flex w-[85%] fill-primary opacity-60"
             xmlns="http://www.w3.org/2000/svg"
             width="223"
             height="62"
