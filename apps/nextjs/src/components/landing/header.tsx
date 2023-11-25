@@ -5,13 +5,13 @@ import { Button } from "@flow/ui/components/button";
 
 export default function Header() {
   return (
-    <header className="absolute top-5 z-30 w-full">
+    <header className="fixed top-5 z-30 w-full">
       <div className="px-4 md:px-6">
         <div className="mx-auto max-w-3xl">
-          <div className={cn("flex h-14 items-center justify-between rounded-lg border border-transparent px-3")}>
+          <div className={cn("nav flex h-14 items-center justify-between backdrop:blur-lg rounded-lg px-3")}>
             <div>
               <Link href={"/"}>
-                <h3 className={cn("text-lg text-gray-900")}>Flow</h3>
+                <h3 className={cn("text-lg font-bold text-gray-200")}>Flow</h3>
               </Link>
             </div>
             <nav className="flex flex-grow">
@@ -19,7 +19,7 @@ export default function Header() {
                 <li>
                   <Link
                     href={"#pricing"}
-                    className={cn("text-gray-500 transition-all duration-500 hover:text-black")}
+                    className={cn("text-gray-200 transition-all duration-500 hover:text-black")}
                   >
                     Pricing
                   </Link>

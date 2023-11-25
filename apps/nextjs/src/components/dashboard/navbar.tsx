@@ -14,7 +14,7 @@ export function Navbar({ user }: { user: any }) {
 
   return (
         <>
-          <div className="border-b border-gray-200">
+          <div className="border-b border-zinc-800">
             <div className="flex h-16 justify-between px-4 sm:px-6 mx-auto max-w-7xl lg:px-8 ">
               <div className="flex">
                 <div className="flex flex-shrink-0 items-center">
@@ -47,8 +47,8 @@ export function Navbar({ user }: { user: any }) {
                       href={item.href}
                       className={cn(
                         pathname === item.href
-                          ? 'border-slate-500 text-gray-900'
-                          : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
+                          ? 'border-slate-200 text-gray-200'
+                          : 'border-transparent text-gray-400 hover:text-gray-200 hover:border-slate-300',
                         'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
                       )}
                       aria-current={pathname === item.href ? 'page' : undefined}

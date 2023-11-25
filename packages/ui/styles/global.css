@@ -4,20 +4,20 @@
 
 @layer base {
   :root {
-    --primary: 240 84% 67%;
+    --primary: 0 0% 100%;
 
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 7%;
+    --foreground: 210 40% 98%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary-foreground: 210 40% 98%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 0, 0%, 9%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -98,6 +98,18 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+  }
+
+  .outline-btn {
+    color: #fff;
+    -webkit-text-fill-color: inherit;
+    border: 1px solid transparent; /* You can adjust the width as per your preference */
+    border-style: solid;
+    border-image: linear-gradient(to right, #ff006d, #d982a5 56%, #58a0dc);
+    border-image-slice: 1; /* Ensures the entire border is covered by the gradient */
+    border-radius: 92px;
+    text-decoration: none;
+    position: relative;
   }
 }
 

@@ -43,8 +43,8 @@ export default async function HomePage() {
           </div>
         </section>
         <Features />
-        <Pricing />
         <Providers />
+        <Pricing />
         <Footer />
       </main>
     </div>
