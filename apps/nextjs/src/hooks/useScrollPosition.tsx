@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from "react";
 
 interface ScrollPositionProps {
   threshold: number;
@@ -12,10 +12,10 @@ const useScrollPosition = ({ threshold }: ScrollPositionProps) => {
       setIsScrolled(window.scrollY >= threshold);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [threshold]);
 

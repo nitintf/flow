@@ -5,10 +5,15 @@ import {
   LifeBuoy,
   LogOut,
   Settings,
-  User
-} from "lucide-react"
+  User,
+} from "lucide-react";
+import { signOut } from "next-auth/react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@flow/ui/components/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@flow/ui/components/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,23 +21,23 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuTrigger
-} from "@flow/ui/components/dropdown-menu"
-
-import { signOut } from "next-auth/react"
+  DropdownMenuTrigger,
+} from "@flow/ui/components/dropdown-menu";
 
 export function UserDropdown({ user }: { user: any }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-          <Avatar className="cursor-pointer">
+        <Avatar className="cursor-pointer">
           <AvatarImage src={user.image} alt={user.name} />
           <AvatarFallback>{user.name[0]}</AvatarFallback>
-          </Avatar>
+        </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56" align="end">
         <DropdownMenuLabel className="py-1">{user.name}</DropdownMenuLabel>
-        <DropdownMenuLabel className="text-[14px] py-0 font-normal pb-2">{user.email}</DropdownMenuLabel>
+        <DropdownMenuLabel className="py-0 pb-2 text-[14px] font-normal">
+          {user.email}
+        </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
@@ -68,5 +73,5 @@ export function UserDropdown({ user }: { user: any }) {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

@@ -35,7 +35,7 @@ const nextAuthOptions: NextAuthConfig = {
           ...session.user,
           id: user.id,
         },
-      }
+      };
     },
   },
 };

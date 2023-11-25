@@ -6,8 +6,9 @@ import "@flow/ui/styles/global.css";
 
 import { headers } from "next/headers";
 
-import { TRPCReactProvider } from "./providers";
 import { cn } from "@flow/ui/lib/utils";
+
+import { TRPCReactProvider } from "./providers";
 
 const fontSans = Inter({
   subsets: ["latin"],
@@ -31,10 +32,15 @@ export const metadata: Metadata = {
 };
 
 export default function Layout(props: { children: React.ReactNode }) {
-
   return (
     <html lang="en" className="h-full">
-      <body suppressHydrationWarning className={cn(["font-sans", fontSans.variable].join(" "), "bg-background overflow-x-hidden")}>
+      <body
+        suppressHydrationWarning
+        className={cn(
+          ["font-sans", fontSans.variable].join(" "),
+          "overflow-x-hidden bg-background",
+        )}
+      >
         <TRPCReactProvider headers={headers()}>
           {props.children}
         </TRPCReactProvider>

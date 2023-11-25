@@ -1,7 +1,7 @@
-'use server'
+"use server";
 
-import { signIn } from "@flow/auth"
+import { signIn } from "@flow/auth";
 
 export async function singInUser() {
-  await signIn("github")
+  await signIn("github");
 }
