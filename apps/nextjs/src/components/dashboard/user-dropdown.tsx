@@ -19,7 +19,6 @@ import {
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@flow/ui/components/dropdown-menu";
@@ -34,11 +33,6 @@ export function UserDropdown({ user }: { user: any }) {
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56" align="end">
-        <DropdownMenuLabel className="py-1">{user.name}</DropdownMenuLabel>
-        <DropdownMenuLabel className="py-0 pb-2 text-[14px] font-normal">
-          {user.email}
-        </DropdownMenuLabel>
-        <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
             <User className="mr-2 h-4 w-4" />

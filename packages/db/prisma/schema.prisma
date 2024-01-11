@@ -10,19 +10,6 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Post {
-    id        Int      @id @default(autoincrement())
-    name      String
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-
-    createdBy   User   @relation(fields: [createdById], references: [id])
-    createdById String
-
-    @@index([name])
-}
-
-// Necessary for Next auth
 model Account {
     id                String  @id @default(cuid())
     userId            String
@@ -57,13 +44,27 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
-    posts         Post[]
+    workspaces    Workspace[] @relation("workspaceMembers")
+    createdWorkspaces Workspace[] @relation("CreatorToWorkspaces")
 }
 
-model VerificationToken {
-    identifier String
-    token      String   @unique
-    expires    DateTime
+model Workspace {
+    id          String    @id @default(cuid())
+    name        String
+    description String?
+    creatorId   String
+    creator     User      @relation(name: "CreatorToWorkspaces", fields: [creatorId], references: [id])
+    members     User[]    @relation("workspaceMembers")
+    invitations WorkspaceInvitation[]
+    createdAt   DateTime  @default(now())
+    updatedAt   DateTime  @updatedAt
+}
 
-    @@unique([identifier, token])
+model WorkspaceInvitation {
+    id           String   @id @default(cuid())
+    email        String
+    workspaceId  String
+    workspace    Workspace @relation(fields: [workspaceId], references: [id])
+    createdAt    DateTime @default(now())
+    acceptedAt   DateTime?
 }

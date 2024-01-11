@@ -2,7 +2,6 @@ import type { PropsWithChildren } from "react";
 import { redirect } from "next/navigation";
 
 import { auth } from "@flow/auth";
-
 import { Navbar } from "~/components/dashboard/navbar";
 
 export default async function Layout({ children }: PropsWithChildren) {
