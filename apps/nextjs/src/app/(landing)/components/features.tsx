@@ -7,14 +7,14 @@ export const Features = () => {
             <h2 className="pb-xxs text-h3 font-[700] text-white">
               Break Limits, Capture Moments with Flow
             </h2>
-            <p className="text-link text-gray-500">
+            <p className="text-link text-gray-400">
               Redefining Screen Recording: Elevate Your Content with AI-Infused
               Brilliance and Effortless Precision in Every Frame.
             </p>
           </div>
 
           <div className="mx-auto mt-l grid max-w-6xl grid-cols-1 gap-xxs md:grid-cols-4">
-            <div className="rounded-[5px] bg-secondary px-xs py-xs">
+            <div className="rounded-[5px] border border-gray-800 bg-[#111827] px-xs py-xs">
               <div className="mb-xxs">
                 <svg
                   fill="#fff"
@@ -42,7 +42,7 @@ export const Features = () => {
                 yourself for total control.
               </p>
             </div>
-            <div className="rounded-[5px] bg-secondary px-xs py-xs">
+            <div className="rounded-[5px] border border-gray-800 bg-[#111827] px-xs py-xs">
               <div className="mb-xxs">
                 <svg
                   width={"40"}
@@ -77,7 +77,7 @@ export const Features = () => {
                 self-hosted solution.
               </p>
             </div>
-            <div className="rounded-[5px] bg-secondary px-xs py-xs">
+            <div className="rounded-[5px] border border-gray-800 bg-[#111827] px-xs py-xs">
               <div className="mb-xxs">
                 <svg
                   width={"40"}
@@ -119,7 +119,7 @@ export const Features = () => {
                 your videos.
               </p>
             </div>
-            <div className="rounded-[5px] bg-secondary px-xs py-xs">
+            <div className="rounded-[5px] border border-gray-800 bg-[#111827] px-xs py-xs">
               <div className="mb-xxs">
                 <svg
                   width={"36"}

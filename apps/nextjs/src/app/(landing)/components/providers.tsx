@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Button } from "@flow/ui/components/button";
+import { Button } from "~/components/ui/button";
 
 export const Providers = () => {
   return (

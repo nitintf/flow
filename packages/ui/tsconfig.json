@@ -1,8 +1,0 @@
-{
-  "extends": "@flow/tsconfig/base.json",
-  "compilerOptions": {
-    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
-  },
-  "include": ["*.ts", "src", "components", "lib"],
-  "exclude": ["node_modules"]
-}

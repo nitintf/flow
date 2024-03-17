@@ -1,28 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
 import { auth } from "@flow/auth";
-import { Button } from "@flow/ui/components/button";
 
-import { Features } from "~/components/landing/features";
-import { Footer } from "~/components/landing/footer";
-import Header from "~/components/landing/header";
-import { Pricing } from "~/components/landing/pricing";
-import { Providers } from "~/components/landing/providers";
-import { Title } from "~/components/landing/title";
+import { Button } from "~/components/ui/button";
+import { Features } from "./components/features";
+import { Footer } from "./components/footer";
+import Header from "./components/header";
+import { Pricing } from "./components/pricing";
+import { Providers } from "./components/providers";
+import { Title } from "./components/title";
 
 export default async function HomePage() {
   const session = await auth();
 
-  if (session && session.user) {
-    redirect("/dashboard");
-  }
-
   return (
-    <div className="flex h-screen flex-col items-center">
-      <Header />
-      <main className="flex-grow">
+    <div className="home flex h-screen flex-col items-center">
+      <Header isLoggedIn={!!session?.user || false} />
+      <main className="home flex-grow">
         {/* Hero Section */}
         <section className="relative">
           <div className="pt-40">

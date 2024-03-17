@@ -9,11 +9,7 @@ import {
 } from "lucide-react";
 import { signOut } from "next-auth/react";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@flow/ui/components/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,7 +17,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@flow/ui/components/dropdown-menu";
+} from "~/components/ui/dropdown-menu";
 
 export function UserDropdown({ user }: { user: any }) {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-import { Badge } from "@flow/ui/components/badge";
-import { Button } from "@flow/ui/components/button";
-import { cn } from "@flow/ui/lib/utils";
+import { Badge } from "~/components/ui/badge";
+import { Button } from "~/components/ui/button";
+import { cn } from "~/lib/utils/cn";
 
 export const Pricing = () => {
   return (
