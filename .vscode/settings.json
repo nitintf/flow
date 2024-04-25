@@ -10,7 +10,7 @@
     { "pattern": "packages/*/" },
     { "pattern": "tooling/*/" }
   ],
-  "tailwindCSS.experimental.configFile": "./packages/ui/tailwind.config.ts",
+  "tailwindCSS.experimental.configFile": "./apps/nextjs/tailwind.config.ts",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.preferences.autoImportFileExcludePatterns": [

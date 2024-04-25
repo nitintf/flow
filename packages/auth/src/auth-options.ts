@@ -31,11 +31,11 @@ const nextAuthOptions: NextAuthConfig = {
     session: async ({ session, user }) => {
       const currentWorkspace = await prisma.workspace.findMany({
         where: {
-          creatorId: user.id
-        }
-      })
+          creatorId: user.id,
+        },
+      });
 
-      console.log('currentWo :>> ', currentWorkspace);
+      console.log("currentWo :>> ", currentWorkspace);
       return {
         ...session,
         user: {

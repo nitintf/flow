@@ -1,6 +1,8 @@
 import Link from "next/link";
 
-import { Button } from "~/components/ui/button";
+import { signIn } from "@flow/auth";
+
+import { Button } from "~/app/_components/ui/button";
 import { cn } from "~/lib/utils/cn";
 
 interface HeaderProps {
@@ -41,13 +43,20 @@ export default function Header({ isLoggedIn }: HeaderProps) {
                   </Link>
                 </li>
                 <li>
-                  <Button asChild size={"sm"}>
-                    {isLoggedIn ? (
+                  {isLoggedIn ? (
+                    <Button asChild size={"sm"}>
                       <Link href={"/dashboard"}>Dashboard</Link>
-                    ) : (
-                      <Link href={"/signin"}>Sign In</Link>
-                    )}
-                  </Button>
+                    </Button>
+                  ) : (
+                    <form
+                      action={async () => {
+                        "use server";
+                        await signIn("github", { redirectTo: "/dashboard" });
+                      }}
+                    >
+                      <Button size={"sm"}>Sign In</Button>
+                    </form>
+                  )}
                 </li>
               </ul>
             </nav>

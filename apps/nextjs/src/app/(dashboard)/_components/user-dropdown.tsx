@@ -5,11 +5,17 @@ import {
   LifeBuoy,
   LogOut,
   Settings,
-  User,
+  User as UserIcon,
 } from "lucide-react";
 import { signOut } from "next-auth/react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
+import type { User } from "@flow/db";
+
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "~/app/_components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,21 +23,24 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "~/components/ui/dropdown-menu";
+} from "~/app/_components/ui/dropdown-menu";
 
-export function UserDropdown({ user }: { user: any }) {
+export function UserDropdown({ user }: { user: User }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Avatar className="cursor-pointer">
-          <AvatarImage src={user.image} alt={user.name} />
-          <AvatarFallback>{user.name[0]}</AvatarFallback>
+          <AvatarImage
+            src={user?.image ?? ""}
+            alt={user.name ?? "User Image"}
+          />
+          <AvatarFallback>{user.name?.[0]}</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56" align="end">
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <User className="mr-2 h-4 w-4" />
+            <UserIcon className="mr-2 h-4 w-4" />
             <span>Profile</span>
           </DropdownMenuItem>
           <DropdownMenuItem>

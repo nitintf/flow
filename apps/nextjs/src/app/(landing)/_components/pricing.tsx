@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
-import { Badge } from "~/components/ui/badge";
-import { Button } from "~/components/ui/button";
+import { Badge } from "~/app/_components/ui/badge";
+import { Button } from "~/app/_components/ui/button";
 import { cn } from "~/lib/utils/cn";
 
 export const Pricing = () => {
@@ -105,12 +105,9 @@ const PricingCard = ({
     <>
       <div className="w-full md:w-1/2 lg:w-1/3">
         <div
-          className={cn(
-            "shadow-pricing relative z-10 mb-10 rounded-[10px] bg-background p-xs",
-            {
-              "outline-btn": active,
-            },
-          )}
+          className={cn("relative z-10 mb-10 rounded-[10px]  p-xs", {
+            "border border-slate-400": active,
+          })}
         >
           {active && (
             <Image
@@ -124,16 +121,17 @@ const PricingCard = ({
           <span className={cn("block text-lg font-semibold text-white")}>
             {type}{" "}
             {active && (
-              <Badge className="ml-xxs text-white" variant={"outline"}>
-                Most Popular
-              </Badge>
+              <div className="group relative ml-4 inline-block rounded-full bg-slate-800 p-px text-xs font-semibold leading-6 text-white no-underline  shadow-2xl shadow-zinc-900">
+                <div className="relative z-10 flex items-center space-x-2 rounded-full bg-zinc-950 px-2 py-0.5 ring-1 ring-white/10 ">
+                  <div className="flex-none rounded-full bg-indigo-200/10 p-1 text-indigo-500">
+                    <div className="h-1.5 w-1.5 rounded-full bg-current"></div>
+                  </div>
+                  <span>Most Popular</span>
+                </div>
+              </div>
             )}
           </span>
-          <h2
-            className={cn("text-[40px] font-bold text-white", {
-              "header-text": active,
-            })}
-          >
+          <h2 className={cn("text-[40px] font-bold text-white")}>
             {price}
             {subscription && (
               <span
